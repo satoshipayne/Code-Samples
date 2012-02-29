@@ -1,19 +1,19 @@
 <?php
 /**
- * This file contains the Blog Class.
+ * This file contains the Blog Class and the associated BlogRepository Class.
  *
  * @author     Satoshi Payne <satoshi.payne@gmail.com>
  * @copyright  Copyright (c) 2011, Satoshi Payne
+ * @version    $Id: Blog.php 105 2012-02-29 01:00:12Z Satoshi $
  */
 use \Doctrine\Common\Collections, 
     \Doctrine\ORM\EntityRepository, 
     \Doctrine\ORM\Event as DoctrineEvent;
 
 /**
- * The Blog Entity Class represents a single blog entry object.
+ * The Blog Entity Class represents a single blog entry.
  *
  * @author    Satoshi Payne <satoshi.payne@gmail.com>
- * @version   $Id: Blog.php 89 2012-02-19 22:40:59Z satoshi $
  * @category  Models
  * @package   Blog
  */
@@ -177,6 +177,11 @@ class Blog extends DataObject implements IViewable
 	}*/
 	
 	public function getComments() { return $this->comments; }
+	public function addComment($value)
+	{
+		$this->comments[] = $value;
+		return $this;
+	}
 	
 	public function getCategories() { return $this->categories; }
 	public function setCategories($value) { $this->categories = $value; return $this; }
@@ -203,6 +208,14 @@ class Blog extends DataObject implements IViewable
 	}
 }
 
+/**
+ * The Blog Repository Class for the Blog Entity Class.
+ *
+ * @author      Satoshi Payne <satoshi.payne@gmail.com>
+ * @category    Models
+ * @package     Blog
+ * @subpackage  Repositories
+ */
 class BlogRepository extends EntityRepository
 {
 	/**

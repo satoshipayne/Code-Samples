@@ -4,21 +4,18 @@
  *
  * @author     Satoshi Payne <satoshi.payne@gmail.com>
  * @copyright  Copyright (c) 2011 Satoshi Payne
- * @version    $Id: detail.phtml 89 2012-02-19 22:40:59Z satoshi $
+ * @version    $Id: detail.phtml 105 2012-02-29 01:00:12Z Satoshi $
  * @category   Views
  * @package    Blog
  */
 ?>
 <div class="containerArea clear">
 <?php if($view->blog): ?>
-	<?php
-	$blogObj = $view->blog['obj'];
-	?>
-	<h1><?= CHtml::encode($blogObj->getTitle()) ?></h1>
-	<span class="date"><?= CHtml::encode($blogObj->getDateDisplay()->format('Y-m-d h:i:s')) ?></span>
-	<span class="user"><?= CHtml::encode($blogObj->getAuthor()->getDisplayName()) ?></span>
+	<h1><?= CHtml::encode($this->blogObj->getTitle()) ?></h1>
+	<span class="date"><?= CHtml::encode($this->blogObj->getDateDisplay()->format('Y-m-d h:i:s')) ?></span>
+	<span class="user"><?= CHtml::encode($this->blogObj->getAuthor()->getDisplayName()) ?></span>
 	<div class="typography clear">
-		<?= $blogObj->getContent() ?>
+		<?= $this->blogObj->getContent() ?>
 	</div>
 	<hr />
 	<div>
@@ -27,14 +24,14 @@
 	
 	<?php if($view->comments): ?>
 		<ul>
-			<?php foreach($view->comments as $i => $comment): ?>
+		<?php foreach($view->comments as $i => $comment): ?>
 			<li>
 				<h3><?= CHtml::encode($comment->getTitle()) ?></h3>
 				<span class="date"><?= CHtml::encode($comment->getDateCreated()->format('Y-m-d h:i:s')) ?></span>
 				<span class="user"><?= CHtml::encode($comment->getAuthor()->getDisplayName()) ?></span>
 				<p><?= nl2br(CHtml::encode($comment->getContent())) ?></p>
 			</li>
-			<?php endforeach ?>
+		<?php endforeach ?>
 		</ul>
 		<div class="standardPaginationArea clear">
 			<?= $view->pagination ?>
@@ -43,7 +40,7 @@
 		<?php if($view->canReply): ?>
 			<form action="" method="post">
 				<input type="hidden" name="FormAction" value="PostComment" />
-				<input type="hidden" name="id" value="<?= $blogObj->getId() ?>" />
+				<input type="hidden" name="id" value="<?= $this->blogObj->getId() ?>" />
 				
 				<div>
 					<label style="display: block;">Title</label>

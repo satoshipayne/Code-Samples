@@ -4,6 +4,7 @@
  *
  * @author     Satoshi Payne <satoshi.payne@gmail.com>
  * @copyright  Copyright (c) 2011, Satoshi Payne
+ * @version    $Id: DataObject.php 105 2012-02-29 01:00:12Z Satoshi $
  */
 use \Doctrine\Common\Collections, 
     \Doctrine\ORM\EntityRepository, 
@@ -14,7 +15,6 @@ use \Doctrine\Common\Collections,
  * to entities.
  *
  * @author      Satoshi Payne <satoshi.payne@gmail.com>
- * @version     $Id: DataObject.php 63 2011-11-09 20:13:06Z satoshi $
  * @category    Models
  * @package     General
  * @subpackage  Metadata

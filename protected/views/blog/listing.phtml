@@ -4,7 +4,7 @@
  *
  * @author     Satoshi Payne <satoshi.payne@gmail.com>
  * @copyright  Copyright (c) 2011 Satoshi Payne
- * @version    $Id: listing.phtml 89 2012-02-19 22:40:59Z satoshi $
+ * @version    $Id: listing.phtml 105 2012-02-29 01:00:12Z Satoshi $
  * @category   Views
  * @package    Blog
  */
@@ -37,10 +37,9 @@
 					<div class="tags">
 						<?php foreach($blogObj->getTags() as $i => $tag): ?>
 						<?php
-						$tagObj = $tag;
-						$link = CHtml::encode($this->siteUrl . $tagObj->getViewableLink());
+						$link = CHtml::encode($this->siteUrl . $tag->getViewableLink());
 						?>
-						<a href="<?= $link ?>"><?= CHtml::encode($tagObj->getTitle()) ?></a>, 
+						<a href="<?= $link ?>"><?= CHtml::encode($tag->getTitle()) ?></a>, 
 						<?php endforeach ?>
 					</div>
 				<?php else: ?>

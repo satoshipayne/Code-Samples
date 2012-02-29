@@ -4,12 +4,12 @@
  *
  * @author     Satoshi Payne <satoshi.payne@gmail.com>
  * @copyright  Copyright (c) 2011, Satoshi Payne
+ * @version    $Id: BlogController.php 105 2012-02-29 01:00:12Z Satoshi $
  */
 /**
  * The BlogController Controller Class defines a set of routes/actions to manage the website's blog section.
  *
  * @author    Satoshi Payne <satoshi.payne@gmail.com>
- * @version   $Id: BlogController.php 89 2012-02-19 22:40:59Z satoshi $
  * @category  Controllers
  * @package   Blog
  */
@@ -144,6 +144,7 @@ class BlogController extends Controller
 		// Assign to view.
 		$this->view->canReply   = $user->isActive() && !$user->isGuest();
 		$this->view->blog       = $blog;
+		$this->view->blogObj    = $blog['obj'];
 		$this->view->comments   = $comments;
 		$this->view->pagination = ViewHelper::pagination($this, 'comments', $commentsCount, $pageSize, $pageNumber, 4);
 		
