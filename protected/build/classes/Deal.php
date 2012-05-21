@@ -25,7 +25,7 @@ class Deal extends BaseDeal implements IViewable
 	 * Set the value of [title] column.
 	 * 
 	 * @param  string $value The new value.
-	 * @return Deal   The current object (for fluent API support).
+	 * @return Deal          The current object (for fluent API support).
 	 */
 	public function setTitle($value)
 	{
@@ -65,8 +65,8 @@ class Deal extends BaseDeal implements IViewable
 	/**
 	 * Wrapper method for the generated 'addCategory' method. Add a category to the current object.
 	 *
-	 * @param DealCategory The category object to add.
-	 * @return Deal        The current object (for fluent API support).
+	 * @param  DealCategory $l The category object to add.
+	 * @return Deal            The current object (for fluent API support).
 	 */
 	public function addCategoryToCollection(DealCategory $l)
 	{
@@ -82,9 +82,9 @@ class Deal extends BaseDeal implements IViewable
 	/**
 	 * Derive the link to the current object based on options and context.
 	 *
-	 * @param mixed $options The options array to assist link generation.
-	 * @param const $context The context to base the link generation on.
-	 * @return string        The link to the current object.
+	 * @param  mixed $options The options array to assist link generation.
+	 * @param  const $context The context to base the link generation on.
+	 * @return string         The link to the current object.
 	 */
 	public function getViewableLink($options = null, $context = IViewable::CONTEXT_DEFAULT)
 	{

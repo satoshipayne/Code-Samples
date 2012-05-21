@@ -22,11 +22,11 @@ class DealQuery extends BaseDealQuery
 	/**
 	 * Get the query object for retrieving a set of deals.
 	 *
-	 * @param string $categoryUrl The urltitle of the category filter.
-	 * @param string $regionPath  The urltitle of the region path filter, this is based on the region's materialised path.
-	 * @param string $keywords    The keywords to search.
-	 * @param string $ordering    The ordering key to use to order the results.
-	 * @return DealQuery          The query encapsulating the query to execute to return the set of deals.
+	 * @param  string $categoryUrl The urltitle of the category filter.
+	 * @param  string $regionPath  The urltitle of the region path filter, this is based on the region's materialised path.
+	 * @param  string $keywords    The keywords to search.
+	 * @param  string $ordering    The ordering key to use to order the results.
+	 * @return DealQuery           The query encapsulating the query to execute to return the set of deals.
 	 */
 	public function getDealsQuery($categoryUrl, $regionPath, $keywords, $ordering)
 	{
@@ -77,8 +77,8 @@ class DealQuery extends BaseDealQuery
 	/**
 	 * Append the 'finalPrice' column to the set of deal results.
 	 *
-	 * @param string $alias The query alias to use.
-	 * @return DealQuery    The current query object.
+	 * @param  string $alias The query alias to use.
+	 * @return DealQuery     The current query object.
 	 */
 	public function getFinalPrice($alias = self::TABLE_NAME)
 	{
@@ -89,8 +89,8 @@ class DealQuery extends BaseDealQuery
 	/**
 	 * Append the conditions to determining if each record is "active".
 	 *
-	 * @param string $alias The query alias to use.
-	 * @return DealQuery    The current query object.
+	 * @param  string $alias The query alias to use.
+	 * @return DealQuery     The current query object.
 	 */
 	public function isActive($alias = self::TABLE_NAME)
 	{
@@ -106,9 +106,9 @@ class DealQuery extends BaseDealQuery
 	/**
 	 * Append the conditions to filter results based on keyword search.
 	 *
-	 * @param string $keywords The keywords to search.
-	 * @param string $alias    The query alias to use.
-	 * @return DealQuery       The current query object.
+	 * @param  string $keywords The keywords to search.
+	 * @param  string $alias    The query alias to use.
+	 * @return DealQuery        The current query object.
 	 */
 	public function filterBySearchKeyword($keywords, $alias = self::TABLE_NAME)
 	{
