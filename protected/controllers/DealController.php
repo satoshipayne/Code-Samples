@@ -9,7 +9,7 @@
  * The DealController Controller Class defines a set of routes/actions for displaying deals on the site.
  *
  * @author    Satoshi Payne <satoshi.payne@gmail.com>
- * @version   $Id: DealController.php 98 2012-02-25 04:42:30Z Satoshi $
+ * @version   $Id: DealController.php 1 2012-05-21 04:05:56Z Satoshi $
  * @category  Controllers
  * @package   Deal
  */

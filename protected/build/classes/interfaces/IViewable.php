@@ -8,11 +8,10 @@
 /**
  * The IViewable Interface defines the interface for objects that are viewable through a link.
  *
- * @author      Satoshi Payne <satoshi.payne@gmail.com>
- * @version     $Id: IViewable.php 98 2012-02-25 04:42:30Z Satoshi $
- * @category    Models
- * @package     Logging
- * @subpackage  Interfaces
+ * @author    Satoshi Payne <satoshi.payne@gmail.com>
+ * @version   $Id: IViewable.php 1 2012-05-21 04:05:56Z Satoshi $
+ * @category  Models
+ * @package   Interfaces
  */
 interface IViewable
 {

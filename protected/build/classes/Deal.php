@@ -1,12 +1,21 @@
 <?php
 /**
+ * This file contains the Deal Class.
+ *
+ * @author     Satoshi Payne <satoshi.payne@gmail.com>
+ * @copyright  Copyright (c) 2012, Satoshi Payne
+ */
+/**
  * Skeleton subclass for representing a row from the 'deal' table.
  *
  * You should add additional methods to this class to meet the
  * application requirements.  This class will only be generated as
  * long as it does not already exist in the output directory.
  *
- * @package propel.generator.Build
+ * @author    Satoshi Payne <satoshi.payne@gmail.com>
+ * @version   $Id: Deal.php 1 2012-05-21 04:05:56Z Satoshi $
+ * @category  Models
+ * @package   propel.generator.Build
  */
 class Deal extends BaseDeal implements IViewable
 {

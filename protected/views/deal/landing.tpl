@@ -3,7 +3,7 @@
  *
  * @author     Satoshi Payne <satoshi.payne@gmail.com>
  * @copyright  Copyright (c) 2012 Satoshi Payne
- * @version    $Id: landing.tpl 105 2012-02-29 01:00:12Z Satoshi $
+ * @version    $Id: landing.tpl 1 2012-05-21 04:05:56Z Satoshi $
  * @category   Views
  * @package    Deal
  *}
