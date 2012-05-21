@@ -26,7 +26,7 @@ class DealQuery extends BaseDealQuery
 	 * @param string $regionPath  The urltitle of the region path filter, this is based on the region's materialised path.
 	 * @param string $keywords    The keywords to search.
 	 * @param string $ordering    The ordering key to use to order the results.
-	 * @return DealQuery The query encapsulating the query to execute to return the set of deals.
+	 * @return DealQuery          The query encapsulating the query to execute to return the set of deals.
 	 */
 	public function getDealsQuery($categoryUrl, $regionPath, $keywords, $ordering)
 	{
@@ -108,7 +108,7 @@ class DealQuery extends BaseDealQuery
 	 *
 	 * @param string $keywords The keywords to search.
 	 * @param string $alias    The query alias to use.
-	 * @return DealQuery    The current query object.
+	 * @return DealQuery       The current query object.
 	 */
 	public function filterBySearchKeyword($keywords, $alias = self::TABLE_NAME)
 	{

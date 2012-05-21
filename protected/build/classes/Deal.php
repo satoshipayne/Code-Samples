@@ -80,11 +80,11 @@ class Deal extends BaseDeal implements IViewable
 	// IViewable Methods.
 	
 	/**
-	 * Derive the link to this deal based on options and context.
+	 * Derive the link to the current object based on options and context.
 	 *
 	 * @param mixed $options The options array to assist link generation.
 	 * @param const $context The context to base the link generation on.
-	 * @return string The link to the deal.
+	 * @return string        The link to the current object.
 	 */
 	public function getViewableLink($options = null, $context = IViewable::CONTEXT_DEFAULT)
 	{

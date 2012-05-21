@@ -65,18 +65,10 @@ class DealController extends Controller
 	}
 	
 	/**
-	 * Listing.
-	 */
-	public function actionListing()
-	{
-		
-	}
-	
-	/**
 	 * Deal.
 	 */
 	public function actionDeal()
 	{
-		
+		// Incomplete.
 	}
 }
