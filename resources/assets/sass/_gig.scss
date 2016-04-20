@@ -1,0 +1,133 @@
+$gig-author-size:    40px !default;
+$gig-author-size-sm: 80px !default;
+
+// Component gig
+@include component(gig) {
+	@extend %clearfix;
+
+	position: relative;
+	margin-bottom: 1.5em;
+
+	@media all and (min-height: $screen-sm-min-height) {
+		margin-bottom: 2.5em;
+	}
+
+	// Part __title
+	@include part(title) {
+		color: $heading-primary-color;
+		font-size: 1em;
+		border: 0;
+		border-left: $gig-author-size solid transparent;
+		margin-bottom: 0.7em;
+		margin-right: 120px; // make room for button
+		padding-left: 10px;
+		padding-top: 0.7em;
+		padding-bottom: 0.7em;
+		min-height: $gig-author-size;
+
+		@media all and (min-width: $screen-sm-min) {
+			font-size: 1.4em;
+			border-left: $gig-author-size-sm solid transparent;
+			margin-bottom: 0;
+			padding-left: 20px;
+			padding-top: 0.2em;
+			padding-bottom: 0.2em;
+			min-height: 0;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+	}
+
+	// Part __owner
+	@include part(owner) {
+		position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 10;
+		width: $gig-author-size;
+		height: $gig-author-size;
+
+		@media all and (min-width: $screen-sm-min) {
+			width: $gig-author-size-sm;
+			height: $gig-author-size-sm;
+		}
+	}
+
+	// Part __deadline
+	@include part(deadline) {
+		color: $text-tertiary-color;
+		display: block;
+		font-size: 0.85em;
+		margin-bottom: 0.5em;
+
+		@media all and (min-width: $screen-sm-min) {
+			border-left: $gig-author-size-sm solid transparent;
+			padding-left: 20px;
+		}
+	}
+
+	// Part __description
+	@include part(description) {
+		color: $text-secondary-color;
+		line-height: 1.6;
+		margin-top: 0.8em;
+		margin-bottom: 0.8em;
+
+		@media all and (min-width: $screen-sm-min) {
+			border-left: $gig-author-size-sm solid transparent;
+			padding-left: 20px;
+		}
+	}
+
+	// Part __reward
+	@include part(reward) {
+		color: $brand-primary-color;
+
+		@media all and (min-width: $screen-sm-min) {
+			border-left: $gig-author-size-sm solid transparent;
+			padding-left: 20px;
+		}
+
+		// Part __other
+		@include part(other) {
+			color: $brand-primary-color-dark;
+			font-size: 80%;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	// Part __view
+	@include part(view) {
+		position: absolute;
+			right: 0;
+			top: 0;
+	}
+
+	// Part __engagements
+	@include part(engagements) {
+		@extend %clearfix;
+
+		margin-top: 2em;
+	}
+
+	// Option --expired
+	@include option(expired) {
+		opacity: 0.7;
+	}
+
+	// when gig avatar is hidden
+	// Option --avatar-display-posts-square, --avatar-display-posts-circle, --avatar-display-none
+	@include option(avatar-display-posts-square, avatar-display-posts-circle, avatar-display-none) {
+
+		// Part __title, __deadline, __description, __reward
+		@include part(title, deadline, description, reward) {
+			border-left: 0;
+			padding-left: 0;
+		}
+	}
+}

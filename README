@@ -1,10 +1,14 @@
 Author: Satoshi Payne
 Date: 2012-05-21 13:03
+Last Updated: 2016-04-20 17:13
 
 This project contains some sample code written by Satoshi Payne.
 
-The original project which these files came from is a project using:
+File with the following:
 - Yii PHP MVC Framework
 - Smarty Templating Engine
 - Propel ORM
 - SVN
+- Laravel Blade Templating Engine
+- SASS
+- jQuery Extension
